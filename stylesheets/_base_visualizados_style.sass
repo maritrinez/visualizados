@@ -1,0 +1,90 @@
+$unit: 1.5rem
+$dark-blue: #556270
+$light-blue: #79BD9A
+$green: #C7F464
+$light-pink: #FF6B6B
+$dark-red: #C44D58
+
+
+=transition($transition)
+	-webkit-transition: $transition
+	-moz-transition: $transition
+	-ms-transition: $transition
+	-o-transition: $transition	
+	transition: $transition
+
+html
+	font-size: 100%
+	line-height: $unit
+	font-family: Dosis
+	font-weight: 200
+	color: $dark-blue
+	background-image: url("/images/subtle_dots.png")
+
+h1
+	font-size: 6rem
+	font-weight: 200
+.content
+	width: $unit * 44
+	margin: 0 auto
+header
+	position: fixed
+	top: 0
+	width: $unit * 44
+	background-image: url("/images/subtle_dots.png")
+	z-index: 8888	
+	padding-bottom: $unit*2
+	h1
+		margin-bottom: $unit
+		font-family: Dosis
+		a
+			text-decoration: none
+			color: $light-pink
+
+	h2	
+		position: absolute
+		top: 0
+		right: 0
+		padding-top: $unit
+		text-align: right
+		font-family: Bad Script
+		color: $dark-blue
+		font-size: 100%
+		line-height: 120%
+		font-weight: 200
+		.name
+			color: $light-blue
+			line-height: 200%
+			font-size: 105%			
+		a
+			font-family: Dosis
+			font-weight: 400
+			color: $light-blue	
+			text-decoration: none
+			line-height: 200%
+			&:hover
+				color: $green
+
+
+address
+	float: none
+	clear: both
+.contact-links
+	li
+		font-family: Ubuntu
+		font-size: 90%
+		list-style: none
+		float: right
+		padding: $unit/2 0
+		margin: 0 $unit
+		&:first-child, &:last-child
+			margin: 0	
+	img
+		vertical-align: middle
+		padding: 0 $unit/4
+	a
+		text-decoration: none
+		font-style: normal
+		color: $dark-blue
+		&:hover
+			color: $green	
