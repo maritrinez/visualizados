@@ -4,6 +4,10 @@ $light-blue: #79BD9A
 $green: #C7F464
 $light-pink: #FF6B6B
 $dark-red: #C44D58
+$information-ipad-landscape:  "screen and (min-width: 801px) and (max-width : 1024px)"
+$information-ipad-portrait: "screen and (min-width : 768px) and (max-width : 800px)"
+$information-mobile-landscape:  "screen and (min-width: 480px) and (max-width : 768px)"
+$information-mobile-portrait: "screen and (max-width : 479px)"
 
 
 =transition($transition)
@@ -22,54 +26,104 @@ html
 	background-image: url("/images/subtle_dots.png")
 
 h1
+	display: inline-block
 	font-size: 6rem
 	font-weight: 200
+	@media #{$information-ipad-portrait}
+		font-size: 5rem
+	@media #{$information-mobile-landscape}
+		font-size: 4rem
+		line-height: 1rem
+	@media #{$information-mobile-portrait}
+		font-size: 3rem
+		line-height: 1rem
 .content
-	width: $unit * 44
+	max-width: $unit * 44
 	margin: 0 auto
+	width: 100%
+
 header
 	position: fixed
 	top: 0
-	width: $unit * 44
+	width: 100%
+	max-width: $unit * 44
 	background-image: url("/images/subtle_dots.png")
 	z-index: 8888	
-	padding-bottom: $unit*2
-	h1
-		margin-bottom: $unit
-		font-family: Dosis
-		a
-			text-decoration: none
-			color: $light-pink
+	padding-bottom: $unit * 2
+	@media #{$information-ipad-landscape}
+		padding-bottom: $unit * 1.5
+	@media #{$information-ipad-portrait}
+		padding-bottom: $unit * 1.5
+	@media screen and (min-width : 568px) and (max-width : 768px)
+		padding-bottom: $unit * 1.5
+	@media screen and (min-width: 480px) and (max-width : 567px)
+		padding-bottom: $unit/2
+		position: relative
+	@media #{$information-mobile-portrait}
+		padding-bottom: $unit/2
+		position: relative
 
-	h2	
-		position: absolute
-		top: 0
-		right: 0
-		padding-top: $unit
-		text-align: right
-		font-family: Bad Script
-		color: $dark-blue
-		font-size: 100%
-		line-height: 120%
-		font-weight: 200
-		.name
-			color: $light-blue
-			line-height: 200%
-			font-size: 105%			
-		a
+	.fixed_bar
+		max-width: $unit * 44
+		margin: 0 auto
+
+		h1
+			margin-bottom: $unit
 			font-family: Dosis
-			font-weight: 400
-			color: $light-blue	
-			text-decoration: none
-			line-height: 200%
-			&:hover
-				color: $green
-
-
+			a
+				text-decoration: none
+				color: $light-pink		
+		h2	
+			position: absolute
+			top: 0
+			right: 0
+			padding-top: $unit
+			text-align: right
+			font-family: Bad Script
+			color: $dark-blue
+			font-size: 100%
+			line-height: 120%
+			font-weight: 200
+			@media #{$information-ipad-landscape}
+				right: 20px
+			@media #{$information-ipad-portrait}
+				right: 20px
+				font-size: 80%
+			@media screen and (min-width : 568px) and (max-width : 768px)
+				right: 20px
+				font-size: 80%
+			@media screen and (min-width: 480px) and (max-width : 567px)
+				position: relative
+				padding-top: 0
+				margin: 0
+				font-size: 80%
+			@media #{$information-mobile-portrait}
+				position: relative
+				padding-top: 0
+				margin: 0
+				font-size: 80%
+			.name
+				color: $light-blue
+				line-height: 200%
+				font-size: 105%			
+			a
+				font-family: Dosis
+				font-weight: 400
+				color: $light-blue	
+				text-decoration: none
+				line-height: 200%
+				&:hover
+					color: $green
 address
 	float: none
 	clear: both
+
 .contact-links
+	@media #{$information-mobile-portrait}
+		padding: 0
+	@media #{$information-mobile-landscape}
+		padding: 0
+		text-align: center
 	li
 		font-family: Ubuntu
 		font-size: 90%
@@ -78,7 +132,17 @@ address
 		padding: $unit/2 0
 		margin: 0 $unit
 		&:first-child, &:last-child
-			margin: 0	
+			margin: 0
+		@media #{$information-mobile-portrait}
+			padding: 0
+			margin: 0
+			float: none
+			text-align: center
+			font-size: 80%
+		@media #{$information-mobile-landscape}
+			float: none
+			display: inline
+			font-size: 80%
 	img
 		vertical-align: middle
 		padding: 0 $unit/4

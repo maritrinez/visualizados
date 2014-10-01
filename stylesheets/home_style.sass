@@ -3,6 +3,21 @@
 .project-list
 	padding: $unit 0
 	margin-top: $unit * 9
+	@media #{$information-ipad-landscape}
+		margin-top: $unit * 6
+	@media #{$information-ipad-portrait}
+		margin-top: $unit * 5
+	@media #{$information-mobile-landscape}
+		margin-top: $unit * 6
+	@media screen and (min-width : 568px) and (max-width : 768px)
+		margin-top: $unit * 5
+	@media screen and (min-width: 480px) and (max-width : 567px)
+		margin-top: 0
+		padding: 0
+	@media #{$information-mobile-portrait}
+		margin-top: 0
+		padding: 0
+
 	h4
 		font-size: 150%
 		font-weight: 400
@@ -19,10 +34,30 @@
 	li
 		list-style: none
 		float: left
-		width: $unit * 14
-		margin: 0 $unit * 1		
-		&:first-child, &:last-child
-			margin: 0
+		width: $unit * 21
+		margin: 0		
+		&:nth-child(even)
+			float: right
+		@media #{$information-ipad-landscape}
+			width: $unit * 19
+		@media #{$information-ipad-portrait}
+			width: $unit * 19
+			float: center
+			&:nth-child(even)
+				float: none
+			margin: 0 auto
+		@media #{$information-mobile-landscape}
+			width: $unit * 19
+			float: center
+			&:nth-child(even)
+				float: none
+			margin: 0 auto
+		@media #{$information-mobile-portrait}
+			width: $unit * 12
+			float: center
+			&:nth-child(even)
+				float: none
+			margin: 0 auto
 	p
 		font-family: Ubuntu
 		font-size: 90%
