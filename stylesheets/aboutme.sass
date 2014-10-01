@@ -9,6 +9,9 @@ main
 	line-height: 160%
 	width: $unit*35
 	text-align: justify
+	@media #{$information-mobile-portrait}
+		width: 90%
+		margin: 0 auto
 	a
 		color: $light-blue
 		text-decoration: none
@@ -21,3 +24,9 @@ main
 	li
 		padding-top: 0
 		padding-bottom: $unit/2
+		@media #{$information-mobile-portrait}
+			padding: 0
+			margin: 0
+			float: none
+			text-align: center
+			font-size: 80%

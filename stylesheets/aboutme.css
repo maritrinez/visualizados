@@ -112,6 +112,13 @@ address {
   float: none;
   clear: both; }
 
+@media screen and (max-width: 479px) {
+  .contact-links {
+    padding: 0; } }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .contact-links {
+    padding: 0;
+    text-align: center; } }
 .contact-links li {
   font-family: Ubuntu;
   font-size: 90%;
@@ -121,6 +128,18 @@ address {
   margin: 0 1.5rem; }
   .contact-links li:first-child, .contact-links li:last-child {
     margin: 0; }
+  @media screen and (max-width: 479px) {
+    .contact-links li {
+      padding: 0;
+      margin: 0;
+      float: none;
+      text-align: center;
+      font-size: 80%; } }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .contact-links li {
+      float: none;
+      display: inline;
+      font-size: 80%; } }
 .contact-links img {
   vertical-align: middle;
   padding: 0 0.375rem; }
@@ -140,6 +159,10 @@ main {
   line-height: 160%;
   width: 52.5rem;
   text-align: justify; }
+  @media screen and (max-width: 479px) {
+    main {
+      width: 90%;
+      margin: 0 auto; } }
   main a {
     color: #79bd9a;
     text-decoration: none; }
@@ -152,3 +175,10 @@ main {
 .contact-links li {
   padding-top: 0;
   padding-bottom: 0.75rem; }
+  @media screen and (max-width: 479px) {
+    .contact-links li {
+      padding: 0;
+      margin: 0;
+      float: none;
+      text-align: center;
+      font-size: 80%; } }
