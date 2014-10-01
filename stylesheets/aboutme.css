@@ -159,10 +159,28 @@ main {
   line-height: 160%;
   width: 52.5rem;
   text-align: justify; }
+  @media screen and (min-width: 801px) and (max-width: 1024px) {
+    main {
+      margin: 12rem auto 0; } }
+  @media screen and (min-width: 768px) and (max-width: 800px) {
+    main {
+      margin: 12rem auto 0; } }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    main {
+      width: 90%;
+      margin: 9rem auto 0; } }
+  @media screen and (min-width: 568px) and (max-width: 768px) {
+    main {
+      margin: 12rem auto 0; } }
+  @media screen and (min-width: 480px) and (max-width: 567px) {
+    main {
+      margin-top: 0;
+      padding: 0; } }
   @media screen and (max-width: 479px) {
     main {
       width: 90%;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding: 0; } }
   main a {
     color: #79bd9a;
     text-decoration: none; }

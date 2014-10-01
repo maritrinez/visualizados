@@ -9,9 +9,25 @@ main
 	line-height: 160%
 	width: $unit*35
 	text-align: justify
+	@media #{$information-ipad-landscape}
+		margin: $unit * 8 auto 0
+	@media #{$information-ipad-portrait}
+		margin: $unit * 8 auto 0
+	@media #{$information-mobile-landscape}
+		width: 90%
+		margin: $unit * 6 auto 0
+	@media screen and (min-width : 568px) and (max-width : 768px)
+		margin: $unit * 8 auto 0
+	@media screen and (min-width: 480px) and (max-width : 567px)
+		margin-top: 0
+		padding: 0
 	@media #{$information-mobile-portrait}
 		width: 90%
 		margin: 0 auto
+		padding: 0
+
+
+
 	a
 		color: $light-blue
 		text-decoration: none
