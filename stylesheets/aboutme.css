@@ -161,7 +161,8 @@ main {
   text-align: justify; }
   @media screen and (min-width: 801px) and (max-width: 1024px) {
     main {
-      margin: 12rem auto 0; } }
+      margin: 12rem auto 0;
+      font-size: 100%; } }
   @media screen and (min-width: 768px) and (max-width: 800px) {
     main {
       margin: 12rem auto 0; } }
@@ -171,7 +172,8 @@ main {
       margin: 9rem auto 0; } }
   @media screen and (min-width: 568px) and (max-width: 768px) {
     main {
-      margin: 12rem auto 0; } }
+      margin: 12rem auto 0;
+      font-size: 100%; } }
   @media screen and (min-width: 480px) and (max-width: 567px) {
     main {
       margin-top: 0;
