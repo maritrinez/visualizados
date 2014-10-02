@@ -6,12 +6,15 @@
 	@media #{$information-ipad-landscape}
 		margin-top: $unit * 6
 	@media #{$information-ipad-portrait}
-		margin-top: $unit * 5
+		margin-top: $unit * 6
 	@media #{$information-mobile-landscape}
 		margin-top: $unit * 6
 	@media screen and (min-width : 568px) and (max-width : 768px)
-		margin-top: $unit * 5
+		margin-top: $unit * 6
 	@media screen and (min-width: 480px) and (max-width : 567px)
+		margin-top: 0
+		padding: 0
+	@media screen and (max-width: 600px) and (orientation: landscape) 
 		margin-top: 0
 		padding: 0
 	@media #{$information-mobile-portrait}
@@ -35,6 +38,7 @@
 		list-style: none
 		float: left
 		width: $unit * 21
+		height: $unit * 28
 		margin: 0		
 		&:nth-child(even)
 			float: right
@@ -43,21 +47,27 @@
 		@media #{$information-ipad-portrait}
 			width: $unit * 19
 			float: center
+			margin: 0 auto
+			height: auto !important
 			&:nth-child(even)
 				float: none
-			margin: 0 auto
 		@media #{$information-mobile-landscape}
 			width: $unit * 19
 			float: center
+			margin: 0 auto
+			height: auto !important
 			&:nth-child(even)
 				float: none
-			margin: 0 auto
 		@media #{$information-mobile-portrait}
 			width: $unit * 12
 			float: center
+			margin: 0 auto
+			height: auto !important
 			&:nth-child(even)
 				float: none
-			margin: 0 auto
+		@media screen and (max-width : 800px)
+			&:nth-child(n+2)
+				margin-top: $unit * 2
 	p
 		font-family: Ubuntu
 		font-size: 90%
@@ -65,7 +75,8 @@
 		padding: 0 $unit/2
 		text-align: justify
 		span
-			font-weight: 400
+			color: $light-pink
+			font-size: 100%
 		a
 			color: $light-blue
 			text-decoration: none
