@@ -10,7 +10,7 @@ h1 {
   display: inline-block;
   font-size: 6rem;
   font-weight: 200; }
-  @media screen and (min-width: 767px) and (max-width: 800px) {
+  @media screen and (min-width: 767px) and (max-width: 975px) {
     h1 {
       font-size: 5rem; } }
   @media screen and (min-width: 480px) and (max-width: 766px) {
@@ -35,10 +35,10 @@ header {
   background-image: url("/images/subtle_dots.png");
   z-index: 8888;
   padding-bottom: 3rem; }
-  @media screen and (min-width: 801px) and (max-width: 1024px) {
+  @media screen and (min-width: 976px) and (max-width: 1024px) {
     header {
       padding-bottom: 3rem; } }
-  @media screen and (min-width: 767px) and (max-width: 800px) {
+  @media screen and (min-width: 767px) and (max-width: 975px) {
     header {
       padding-bottom: 3rem; } }
   @media screen and (min-width: 568px) and (max-width: 768px) {
@@ -75,10 +75,10 @@ header {
       font-size: 100%;
       line-height: 120%;
       font-weight: 200; }
-      @media screen and (min-width: 801px) and (max-width: 1024px) {
+      @media screen and (min-width: 976px) and (max-width: 1024px) {
         header .fixed_bar h2 {
           right: 20px; } }
-      @media screen and (min-width: 767px) and (max-width: 800px) {
+      @media screen and (min-width: 767px) and (max-width: 975px) {
         header .fixed_bar h2 {
           right: 20px;
           font-size: 80%; } }
@@ -163,10 +163,10 @@ address {
 .project-list {
   padding: 1.5rem 0;
   margin-top: 13.5rem; }
-  @media screen and (min-width: 801px) and (max-width: 1024px) {
+  @media screen and (min-width: 976px) and (max-width: 1024px) {
     .project-list {
       margin-top: 9rem; } }
-  @media screen and (min-width: 767px) and (max-width: 800px) {
+  @media screen and (min-width: 767px) and (max-width: 975px) {
     .project-list {
       margin-top: 9rem; } }
   @media screen and (min-width: 480px) and (max-width: 766px) {
@@ -202,15 +202,15 @@ address {
   .project-list li {
     list-style: none;
     float: left;
-    width: 31.5rem;
+    width: 30rem;
     height: 42rem;
     margin: 0; }
     .project-list li:nth-child(even) {
       float: right; }
-    @media screen and (min-width: 801px) and (max-width: 1024px) {
+    @media screen and (min-width: 976px) and (max-width: 1024px) {
       .project-list li {
-        width: 28.5rem; } }
-    @media screen and (min-width: 767px) and (max-width: 800px) {
+        width: 30rem; } }
+    @media screen and (min-width: 767px) and (max-width: 975px) {
       .project-list li {
         width: 37.5rem;
         float: none;
