@@ -199,6 +199,11 @@ address {
       color: #556270; }
       .project-list h4 a:hover {
         color: #C7F464; }
+
+      .project-list .no-clickable:hover {
+        cursor: default;
+        color: #556270;
+      }
   .project-list li {
     list-style: none;
     float: left;
