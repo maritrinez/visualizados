@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Anotaciones Beatriz</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="app">
+      <p style="color: white; background-color: green" v-if="successMsg != null">{{ successMsg }}</p>
+      <p style="color: white; background-color: red" v-if="errorMsg != null">{{ errorMsg }}</p>
+
+      <form class="pure-form pure-form-stacked" @submit.prevent="submitForm">
+        <fieldset>
+          <label for="adulto">Adulto
+            <select id="adulto" name="adulto" v-model="adult">
+              <option value="madre" selected>madre</option>
+              <option value="padre">padre</option>
+              <option value="padre y madre">padre y madre</option>
+            </select>
+          </label>
+
+          <label for="situacion">Situación
+            <select id="situacion" name="situacion" v-model="position">
+              <option value="calle" selected>calle</option>
+              <option value="guarderia">guarderia</option>
+              <option value="parque">parque</option>
+            </select>
+          </label>
+
+          <label for="notas">
+            <textarea name="notas" v-model="notes" rows="10" cols="80"></textarea>
+          </label>
+
+          <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+  </body>
+</html>
