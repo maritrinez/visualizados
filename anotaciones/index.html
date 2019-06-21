@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <title>Anotaciones Beatriz</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       form.pure-form {
         padding: 1rem;
@@ -29,50 +29,56 @@
       <p style="color: white; background-color: green" v-if="successMsg != null">{{ successMsg }}</p>
       <p style="color: white; background-color: red" v-if="errorMsg != null">{{ errorMsg }}</p>
 
-      <form class="pure-form pure-form-stacked" @submit.prevent="submitForm">
+      <form class="pure-form pure-form-stacked pure-g" @submit.prevent="submitForm">
         <fieldset>
-          <h3>Adulto</h3>
-          <p class='p-radio'>
-            <input id="madre" type="radio" name="adulto" value="madre" v-model="adult" checked>
-            <label class="radio-label" for="madre">Madre</label>
-          </p>
-          <p class='p-radio'>
-            <input id="padre" type="radio" name="adulto" value="padre" v-model="adult" checked>
-            <label class="radio-label" for="padre">Padre</label>
-          </p>
-          <p class='p-radio'>
-            <input id="madpad" type="radio" name="adulto" value="madre y padre" v-model="adult" checked>
-            <label class="radio-label" for="madpad">Madre y padre</label>
-          </p>
-          <p class='p-radio'>
-            <input id="otros" type="radio" name="adulto" value="otros" v-model="adult" checked>
-            <label class="radio-label" for="otros">Otros</label>
-          </p>
+          <div class="pure-u-1 pure-u-md-1">
+            <h3>Adulto</h3>
+            <p class='p-radio'>
+              <input id="madre" type="radio" name="adulto" value="madre" v-model="adult" checked>
+              <label class="radio-label" for="madre">Madre</label>
+            </p>
+            <p class='p-radio'>
+              <input id="padre" type="radio" name="adulto" value="padre" v-model="adult" checked>
+              <label class="radio-label" for="padre">Padre</label>
+            </p>
+            <p class='p-radio'>
+              <input id="madpad" type="radio" name="adulto" value="madre y padre" v-model="adult" checked>
+              <label class="radio-label" for="madpad">Madre y padre</label>
+            </p>
+            <p class='p-radio'>
+              <input id="otros" type="radio" name="adulto" value="otros" v-model="adult" checked>
+              <label class="radio-label" for="otros">Otros</label>
+            </p>
+          </div>
 
-          <h3>Situación</h3>
-          <p class='p-radio'>
-            <input id="calle" type="radio" name="situacion" value="calle" v-model="position" checked>
-            <label class="radio-label" for="calle">Calle</label>
-          </p>
-          <p class='p-radio'>
-            <input id="guarderia" type="radio" name="situacion" value="guarderia" v-model="position" checked>
-            <label class="radio-label" for="guarderia">Guardería</label>
-          </p>
-          <p class='p-radio'>
-            <input id="parque" type="radio" name="situacion" value="parque" v-model="position" checked>
-            <label class="radio-label" for="parque">Parque</label>
-          </p>
-          <p class='p-radio'>
-            <input id="otros-s" type="radio" name="situacion" value="otros" v-model="position" checked>
-            <label class="radio-label" for="otros-s">Otros</label>
-          </p>
+          <div class="pure-u-1 pure-u-md-1">
+            <h3>Situación</h3>
+            <p class='p-radio'>
+              <input id="calle" type="radio" name="situacion" value="calle" v-model="position" checked>
+              <label class="radio-label" for="calle">Calle</label>
+            </p>
+            <p class='p-radio'>
+              <input id="guarderia" type="radio" name="situacion" value="guarderia" v-model="position" checked>
+              <label class="radio-label" for="guarderia">Guardería</label>
+            </p>
+            <p class='p-radio'>
+              <input id="parque" type="radio" name="situacion" value="parque" v-model="position" checked>
+              <label class="radio-label" for="parque">Parque</label>
+            </p>
+            <p class='p-radio'>
+              <input id="otros-s" type="radio" name="situacion" value="otros" v-model="position" checked>
+              <label class="radio-label" for="otros-s">Otros</label>
+            </p>
+          </div>
 
-          <h3>Notas</h3>
-          <label for="notas">
-            <textarea name="notas" v-model="notes" rows="6" cols="39"></textarea>
-          </label>
+          <div class="pure-u-1 pure-u-md-1">
+            <h3>Notas</h3>
+            <label for="notas">
+              <textarea name="notas" v-model="notes" rows="6" cols="39"></textarea>
+            </label>
 
-          <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+            <button type="submit" class="pure-button pure-button-primary">Enviar</button>
+          </div>
         </fieldset>
       </form>
     </div>
